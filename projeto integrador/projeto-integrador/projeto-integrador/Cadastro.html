@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <?php include(conexao.php); ?>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Cadastro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background:url('../projeto-integrador/img/fundo-cadastro.png');
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 400px;
+            left: 300px;
+            position: relative;
+            margin: 300px auto;
+            padding: 20px;
+            background: rgb(227,227,227);
+            background: linear-gradient(90deg, rgb(240, 240, 240) 43%, rgba(255,255,255,1) 100%);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        input[type="text"],
+        input[type="num"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            background: rgb(0,119,119);
+            background: linear-gradient(90deg, rgba(0,119,119,1) 0%, rgba(0,154,154,1) 100%); 
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0482d6;
+        }
+    </style>
+</head>
+<body>
+	
+<a class="botao-voltar" href="Login.html">Voltar</a>
+    <div class="container">
+        <h2>Cadastro</h2>
+        <form action="processar_cadastro.php" method="post">
+            <input type="text" name="nome" placeholder="Nome" required>
+            <input type="num" name="CPF" placeholder="CPF" required>
+            <input type="email" name="email" placeholder="E-mail" required>
+            <input type="password" name="senha" placeholder="Senha" required>
+            <input type="password" name="confirmar_senha" placeholder="Confirmar Senha" required>
+            <input type="submit" value="Cadastrar">
+        </form>
+    </div>
+</body>
+</html>
